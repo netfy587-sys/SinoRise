@@ -1,0 +1,146 @@
+<body>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Georgia,'Times New Roman',serif;color:#1d2340;background:#f5f4fb;line-height:1.8}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.narrow{max-width:760px;margin:0 auto;padding:0 20px}
+header{background:#171c3a;position:sticky;top:0;z-index:9}
+.nav{display:flex;justify-content:space-between;align-items:center;height:66px}
+.logo{font-size:25px;font-weight:700;color:#c9c3ff;letter-spacing:1px}
+.nav a.l{margin-left:22px;font-family:Arial,sans-serif;font-size:14px;color:#d8dcf5}
+.hero{background:linear-gradient(rgba(23,28,58,.55),rgba(23,28,58,.8)),url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%201600%20800%27%20width%3D%271600%27%20height%3D%27800%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%23171c3a%27%2F%3E%3Cstop%20offset%3D%27.6%27%20stop-color%3D%27%233d3a9e%27%2F%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%238b7ff5%27%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27url%28%23g%29%27%2F%3E%3Ccircle%20cx%3D%27240.0%27%20cy%3D%27200.0%27%20r%3D%27280.0%27%20fill%3D%27white%27%20fill-opacity%3D%27.08%27%2F%3E%3Ccircle%20cx%3D%271440.0%27%20cy%3D%27640.0%27%20r%3D%27360.0%27%20fill%3D%27white%27%20fill-opacity%3D%27.08%27%2F%3E%3Ccircle%20cx%3D%271120.0%27%20cy%3D%27160.0%27%20r%3D%273%27%20fill%3D%27white%27%2F%3E%3Ccircle%20cx%3D%27480.0%27%20cy%3D%27560.0%27%20r%3D%272%27%20fill%3D%27white%27%2F%3E%3Ccircle%20cx%3D%27880.0000000000001%27%20cy%3D%2796.0%27%20r%3D%272%27%20fill%3D%27white%27%2F%3E%3Ctext%20x%3D%2750%25%27%20y%3D%27463.99999999999994%27%20text-anchor%3D%27middle%27%20font-size%3D%27440%27%20opacity%3D%270.4%27%3E%F0%9F%8C%99%3C%2Ftext%3E%3C%2Fsvg%3E') center/cover;color:#fff;padding:120px 0 110px;text-align:center}
+.hero small{font-family:Arial,sans-serif;letter-spacing:3px;text-transform:uppercase;font-size:13px;color:#b9b3f5}
+.hero h1{font-size:48px;line-height:1.2;margin:14px auto 16px;max-width:820px}
+.hero p{max-width:700px;margin:0 auto;font-size:18px;color:#e4e6fa}
+.sec{padding:64px 0}
+.sec h2{font-size:32px;margin-bottom:14px;color:#171c3a}
+.sec p{margin-bottom:16px;color:#3b4266}
+.lead{font-size:20px;color:#2b3157}
+.toc{background:#fff;border-radius:14px;padding:26px 30px;box-shadow:0 8px 24px rgba(23,28,58,.07);margin-top:-50px;position:relative}
+.toc h3{font-size:20px;margin-bottom:10px}
+.toc ol{padding-left:22px;columns:2;font-family:Arial,sans-serif;font-size:15px}
+.toc li{margin-bottom:6px}
+.toc a{color:#4c43c7}
+.fig{margin:26px 0}
+.fig img{width:100%;height:340px;object-fit:cover;border-radius:14px;display:block}
+.fig span{display:block;font-family:Arial,sans-serif;font-size:13px;color:#6b7194;margin-top:8px}
+.white{background:#fff;border-top:1px solid #e3e1f3;border-bottom:1px solid #e3e1f3}
+.stages{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:22px}
+.stages div{background:#f5f4fb;border-radius:12px;padding:22px;border-top:4px solid #6a5ff0}
+.stages h4{font-size:18px;margin-bottom:6px}
+.stages p{font-size:14px;margin:0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:20px}
+.two div{background:#fff;border-radius:12px;padding:22px;border:1px solid #e3e1f3}
+.two h4{font-size:17px;margin-bottom:6px;color:#4c43c7}
+.two p{font-size:15px;margin:0}
+.quote{border-left:5px solid #6a5ff0;background:#eeecfc;padding:20px 26px;border-radius:0 12px 12px 0;font-size:20px;color:#2b3157;margin:26px 0}
+.habits{list-style:none;margin-top:14px}
+.habits li{background:#fff;border:1px solid #e3e1f3;border-radius:10px;padding:14px 18px;margin-bottom:10px;font-size:16px}
+details{background:#fff;border:1px solid #e3e1f3;border-radius:10px;padding:16px 20px;margin-bottom:12px}
+summary{cursor:pointer;font-weight:700;color:#171c3a}
+details p{margin:10px 0 0;font-size:15px}
+.end{background:#171c3a;color:#e4e6fa;text-align:center;padding:70px 0}
+.end h2{color:#c9c3ff;font-size:32px;margin-bottom:12px}
+.end p{max-width:660px;margin:0 auto;color:#d8dcf5}
+.note{font-family:Arial,sans-serif;font-size:13px;color:#6b7194;margin-top:18px}
+footer{background:#0f1330;color:#aeb3d8;text-align:center;padding:24px 0;font-family:Arial,sans-serif;font-size:14px}
+@media(max-width:800px){.stages,.two{grid-template-columns:1fr}.toc ol{columns:1}.hero h1{font-size:32px}.nav a.l{display:none}.fig img{height:220px}}
+</style>
+
+<header><div class="wrap nav"><a class="logo" href="#">SinoRise</a><nav><a class="l" href="#why">Why Sleep</a><a class="l" href="#stages">Stages</a><a class="l" href="#habits">Habits</a><a class="l" href="#faq">FAQ</a></nav></div></header>
+
+<section class="hero"><div class="wrap">
+<small>A Plain-Language Reading Guide</small>
+<h1>Understanding Sleep: What Happens While You Rest</h1>
+<p>SinoRise explains in simple words how sleep works, why the body needs it and which everyday habits support a calmer night.</p>
+</div></section>
+
+<div class="wrap"><div class="toc"><h3>In this article</h3><ol>
+<li><a href="#why">Why we sleep at all</a></li><li><a href="#clock">The body clock</a></li><li><a href="#stages">The four stages of a night</a></li><li><a href="#dreams">What dreaming is</a></li><li><a href="#light">Light, screens and sleep</a></li><li><a href="#habits">Habits that help</a></li><li><a href="#myths">Common myths</a></li><li><a href="#faq">Questions people ask</a></li></ol></div></div>
+
+<section class="sec" id="why"><div class="narrow">
+<h2>Why we sleep at all</h2>
+<p class="lead">Every living brain studied so far needs some form of rest. Humans spend roughly a third of life asleep, and scientists are still uncovering everything that happens during that time.</p>
+<p>At SinoRise we like to start with a simple idea: sleep is active work, not idle time. While you lie still, the brain sorts the day’s memories, the body repairs tissue and hormones that control hunger and growth are released in careful patterns.</p>
+<div class="fig"><img src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%201000%20400%27%20width%3D%271000%27%20height%3D%27400%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%23171c3a%27%2F%3E%3Cstop%20offset%3D%27.6%27%20stop-color%3D%27%233d3a9e%27%2F%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%238b7ff5%27%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27url%28%23g%29%27%2F%3E%3Ccircle%20cx%3D%27150.0%27%20cy%3D%27100.0%27%20r%3D%27140.0%27%20fill%3D%27white%27%20fill-opacity%3D%27.08%27%2F%3E%3Ccircle%20cx%3D%27900.0%27%20cy%3D%27320.0%27%20r%3D%27180.0%27%20fill%3D%27white%27%20fill-opacity%3D%27.08%27%2F%3E%3Ccircle%20cx%3D%27700.0%27%20cy%3D%2780.0%27%20r%3D%273%27%20fill%3D%27white%27%2F%3E%3Ccircle%20cx%3D%27300.0%27%20cy%3D%27280.0%27%20r%3D%272%27%20fill%3D%27white%27%2F%3E%3Ccircle%20cx%3D%27550.0%27%20cy%3D%2748.0%27%20r%3D%272%27%20fill%3D%27white%27%2F%3E%3Ctext%20x%3D%2750%25%27%20y%3D%27231.99999999999997%27%20text-anchor%3D%27middle%27%20font-size%3D%27168%27%20opacity%3D%271%27%3E%F0%9F%8C%99%3C%2Ftext%3E%3Ctext%20x%3D%2750%25%27%20y%3D%27376%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2Csans-serif%27%20font-size%3D%2724%27%20fill%3D%27white%27%20fill-opacity%3D%27.9%27%3EA%20quiet%20bedroom%20at%20night%3C%2Ftext%3E%3C%2Fsvg%3E" alt="A quiet bedroom at night"><span>Sleep is a busy period of maintenance for the brain and body.</span></div>
+<p>Most adults do well with seven to nine hours, although needs vary from person to person. Children and teenagers need more because their bodies are still growing.</p>
+</div></section>
+
+<section class="sec white" id="clock"><div class="narrow">
+<h2>The body clock</h2>
+<p>Deep in the brain sits a tiny group of cells that works like a master clock. It follows a cycle of about twenty-four hours, known as the circadian rhythm, and tells the body when to feel alert and when to feel drowsy.</p>
+<p>Morning daylight is the strongest signal that resets this clock. In the evening, as light fades, the body begins to release melatonin, a hormone that prepares you for rest.</p>
+<div class="quote">A steady daily rhythm is one of the simplest gifts you can give your sleep.</div>
+<p>People also differ in natural timing. Some feel sharpest early in the day, others in the evening. Neither is better; the key is keeping your own schedule fairly regular.</p>
+</div></section>
+
+<section class="sec" id="stages"><div class="wrap">
+<h2>The four stages of a night</h2>
+<p style="max-width:760px">A night of sleep is not one flat block. It moves through repeating cycles of about ninety minutes, and each cycle contains lighter and deeper phases.</p>
+<div class="stages">
+<div><h4>Stage 1</h4><p>The doorway to sleep. Muscles relax and breathing slows. You wake easily during these few minutes.</p></div>
+<div><h4>Stage 2</h4><p>Light sleep. Heart rate and body temperature dip, and the brain produces short bursts of activity.</p></div>
+<div><h4>Stage 3</h4><p>Deep sleep. The body is hardest to wake, and physical repair is at its peak.</p></div>
+<div><h4>REM</h4><p>Eyes move quickly beneath the lids, the brain is active and most vivid dreams happen.</p></div>
+</div>
+<div class="fig"><img src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%201000%20400%27%20width%3D%271000%27%20height%3D%27400%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%23171c3a%27%2F%3E%3Cstop%20offset%3D%27.6%27%20stop-color%3D%27%233d3a9e%27%2F%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%238b7ff5%27%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27url%28%23g%29%27%2F%3E%3Ccircle%20cx%3D%27150.0%27%20cy%3D%27100.0%27%20r%3D%27140.0%27%20fill%3D%27white%27%20fill-opacity%3D%27.08%27%2F%3E%3Ccircle%20cx%3D%27900.0%27%20cy%3D%27320.0%27%20r%3D%27180.0%27%20fill%3D%27white%27%20fill-opacity%3D%27.08%27%2F%3E%3Ccircle%20cx%3D%27700.0%27%20cy%3D%2780.0%27%20r%3D%273%27%20fill%3D%27white%27%2F%3E%3Ccircle%20cx%3D%27300.0%27%20cy%3D%27280.0%27%20r%3D%272%27%20fill%3D%27white%27%2F%3E%3Ccircle%20cx%3D%27550.0%27%20cy%3D%2748.0%27%20r%3D%272%27%20fill%3D%27white%27%2F%3E%3Ctext%20x%3D%2750%25%27%20y%3D%27231.99999999999997%27%20text-anchor%3D%27middle%27%20font-size%3D%27168%27%20opacity%3D%271%27%3E%E2%8F%B3%3C%2Ftext%3E%3Ctext%20x%3D%2750%25%27%20y%3D%27376%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2Csans-serif%27%20font-size%3D%2724%27%20fill%3D%27white%27%20fill-opacity%3D%27.9%27%3ESleep%20cycles%20repeat%20through%20the%20night%3C%2Ftext%3E%3C%2Fsvg%3E" alt="Sleep cycles repeat through the night"><span>Deep sleep dominates the first half of the night, while REM grows longer toward morning.</span></div>
+</div></section>
+
+<section class="sec white" id="dreams"><div class="narrow">
+<h2>What dreaming is</h2>
+<p>Dreams occur in every stage, but the most memorable ones appear during REM sleep. Researchers believe dreaming may help the brain process emotions and connect new memories with old ones, though the full purpose is still debated.</p>
+<p>Forgetting most dreams is normal. The parts of the brain that store new memories are less active during REM, which is why dreams fade soon after waking unless you write them down.</p>
+</div></section>
+
+<section class="sec" id="light"><div class="narrow">
+<h2>Light, screens and sleep</h2>
+<p>Bright light late in the evening tells the brain that daytime is still going. Phone and computer screens give off a lot of blue-rich light, and using them close to bedtime can delay the natural rise of melatonin.</p>
+<div class="two">
+<div><h4>Daytime</h4><p>Get natural light early, ideally outdoors. It strengthens the body clock and improves alertness.</p></div>
+<div><h4>Evening</h4><p>Dim room lights an hour or two before bed and put screens away, or lower their brightness.</p></div>
+</div>
+<div class="fig"><img src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%201000%20400%27%20width%3D%271000%27%20height%3D%27400%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%23171c3a%27%2F%3E%3Cstop%20offset%3D%27.6%27%20stop-color%3D%27%233d3a9e%27%2F%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%238b7ff5%27%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27url%28%23g%29%27%2F%3E%3Ccircle%20cx%3D%27150.0%27%20cy%3D%27100.0%27%20r%3D%27140.0%27%20fill%3D%27white%27%20fill-opacity%3D%27.08%27%2F%3E%3Ccircle%20cx%3D%27900.0%27%20cy%3D%27320.0%27%20r%3D%27180.0%27%20fill%3D%27white%27%20fill-opacity%3D%27.08%27%2F%3E%3Ccircle%20cx%3D%27700.0%27%20cy%3D%2780.0%27%20r%3D%273%27%20fill%3D%27white%27%2F%3E%3Ccircle%20cx%3D%27300.0%27%20cy%3D%27280.0%27%20r%3D%272%27%20fill%3D%27white%27%2F%3E%3Ccircle%20cx%3D%27550.0%27%20cy%3D%2748.0%27%20r%3D%272%27%20fill%3D%27white%27%2F%3E%3Ctext%20x%3D%2750%25%27%20y%3D%27231.99999999999997%27%20text-anchor%3D%27middle%27%20font-size%3D%27168%27%20opacity%3D%271%27%3E%F0%9F%93%B1%3C%2Ftext%3E%3Ctext%20x%3D%2750%25%27%20y%3D%27376%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2Csans-serif%27%20font-size%3D%2724%27%20fill%3D%27white%27%20fill-opacity%3D%27.9%27%3EDim%20light%20helps%20the%20body%20wind%20down%3C%2Ftext%3E%3C%2Fsvg%3E" alt="Dim light helps the body wind down"><span>Soft, warm lighting in the evening supports a smoother transition to sleep.</span></div>
+</div></section>
+
+<section class="sec white" id="habits"><div class="narrow">
+<h2>Habits that help</h2>
+<p>Experts often group helpful routines under the name sleep hygiene. None of them is difficult, and small changes add up over a few weeks.</p>
+<ul class="habits">
+<li>Keep a regular wake-up time, including weekends, as much as possible.</li>
+<li>Keep the bedroom cool, quiet and dark.</li>
+<li>Limit caffeine in the afternoon, since its effects can last for many hours.</li>
+<li>Finish heavy meals a few hours before bed.</li>
+<li>Move your body during the day; gentle exercise often improves sleep quality.</li>
+<li>Use the bed mainly for sleep so the mind links it with rest.</li>
+</ul>
+<p style="margin-top:18px">Writing down tomorrow’s tasks before bed can also quiet a busy mind. SinoRise readers often find that a short, repeated evening routine works better than any single trick.</p>
+</div></section>
+
+<section class="sec" id="myths"><div class="wrap">
+<h2>Common myths</h2>
+<div class="two">
+<div><h4>Myth: You can fully “catch up” on weekends</h4><p>An extra sleep-in helps a little, but a steady routine does more for energy than swinging between short and long nights.</p></div>
+<div><h4>Myth: Alcohol helps you sleep better</h4><p>It may make you drowsy at first, yet it tends to fragment sleep and reduce REM later in the night.</p></div>
+<div><h4>Myth: Older adults need very little sleep</h4><p>Needs change only slightly with age. Older adults often sleep more lightly, but still benefit from similar total rest.</p></div>
+<div><h4>Myth: Lying awake in bed is still restful</h4><p>Staying in bed while frustrated can teach the brain to link bed with worry. If you cannot sleep, a quiet activity in dim light can help.</p></div>
+</div>
+</div></section>
+
+<section class="sec white" id="faq"><div class="narrow">
+<h2>Questions people ask</h2>
+<details><summary>How long does it take to fall asleep?</summary><p>For many healthy adults it takes about ten to twenty minutes. Falling asleep the moment your head touches the pillow can actually be a sign of being very tired.</p></details>
+<details><summary>Is it normal to wake briefly at night?</summary><p>Yes. Short awakenings between cycles are common, and most are forgotten by morning.</p></details>
+<details><summary>Do naps help?</summary><p>A short nap of twenty to thirty minutes early in the afternoon can refresh the mind without disturbing night sleep.</p></details>
+<details><summary>When should someone speak to a doctor?</summary><p>If trouble sleeping lasts for weeks, or you feel very sleepy during the day despite enough time in bed, a doctor or sleep specialist can look for the cause.</p></details>
+<p class="note">This article is for general learning and is not medical advice.</p>
+</div></section>
+
+<section class="end"><div class="wrap">
+<h2>A Calmer Night Starts With Understanding</h2>
+<p>Sleep is not a luxury; it is a basic need that shapes mood, memory and health. We hope this SinoRise guide helps you see your own nights in a clearer light and make small, steady changes.</p>
+</div></section>
+
+<footer><div class="wrap">&copy; 2026 SinoRise. All rights reserved.</div></footer>
+</body>
